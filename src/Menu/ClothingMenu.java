@@ -111,27 +111,30 @@ public class ClothingMenu implements Menu{
     }
 
     private void addShirt(){
-        System.out.println("\n---Addning Shirt---");
+        System.out.println("\n---Adding Shirt---");
 
-        try{
-            System.out.println("Enter id ");
+        try {
+            System.out.println("Enter id");
             int id = scanner.nextInt();
             scanner.nextLine();
 
-            System.out.println("Enter name ");
+            System.out.println("Enter name");
             String name = scanner.nextLine();
 
-            System.out.println("Enter price ");
+            System.out.println("Enter price");
             double price = scanner.nextDouble();
+            scanner.nextLine();
 
-            System.out.println("Enter size ");
+            System.out.println("Enter size");
             int size = scanner.nextInt();
+            scanner.nextLine();
 
-            System.out.println("Enter sleeve length ");
-            int sleeveLength =  scanner.nextInt();
+            System.out.println("Enter sleeve length");
+            int sleeveLength = scanner.nextInt();
 
             clothingList.add(new Shirt(id, name, price, size, sleeveLength));
-            System.out.println(name + "Shirt added ");
+            System.out.println("Shirt has been added");
+
         }
         catch (java.util.InputMismatchException e){
             System.out.println("Error invalid input");
@@ -142,6 +145,7 @@ public class ClothingMenu implements Menu{
             scanner.nextLine();
         }
     }
+
 
     private void addShorts() {
         System.out.println("\n---Addning Shorts---");
@@ -163,7 +167,7 @@ public class ClothingMenu implements Menu{
             System.out.println("Enter waist length ");
             int waist = scanner.nextInt();
 
-            clothingList.add(new Shirt(id, name, price, size, waist));
+            clothingList.add(new Shorts(id, size, price, name, waist));
             System.out.println(name + "Short added");
         } catch (java.util.InputMismatchException e) {
             System.out.println("Error invalid input");
@@ -173,19 +177,19 @@ public class ClothingMenu implements Menu{
             scanner.nextLine();
         }
     }
-    public void viewClothing(){
+    public void viewClothing() {
         System.out.println("\n---All clothing---");
 
-        if(clothingList.isEmpty()){
+        if (clothingList.isEmpty()) {
             System.out.println("No clothing found");
             return;
         }
 
-        for(int i=0; i<clothingList.size(); i++){
+        for (int i = 0; i < clothingList.size(); i++) {
             Clothing s = clothingList.get(i);
-            System.out.println( (i + 1) + ". ");
+            System.out.println((i + 1) + ". ");
 
-            if(s instanceof Shirt){
+            if (s instanceof Shirt) {
                 System.out.println("[Shirt] ");
             } else if (s instanceof Shorts) {
                 System.out.println("[Shorts]");
@@ -193,6 +197,7 @@ public class ClothingMenu implements Menu{
             System.out.println(s.toString());
         }
     }
+
 
     private void viewShirts(){
         System.out.println("\n---Shirts---");
