@@ -229,7 +229,7 @@ public class ClothingMenu implements Menu{
     }
 
     private void doCloth(){
-        System.out.println("doing Cloth");
+        System.out.println("\n---Doing Cloth---");
 
         if(clothingList.isEmpty()){
             System.out.println("No clothing found");
@@ -296,7 +296,7 @@ public class ClothingMenu implements Menu{
             scanner.nextLine();
 
             if(choice<1 || choice>staffList.size()){
-                throw new ExceptionHandling("Invalid item number ");
+                throw new ExceptionHandling("Invalid choice ");
             }
 
             Staff staff = staffList.get(choice-1);

@@ -15,6 +15,8 @@ public class Shorts extends Clothing{
         this.waist=waist;
     }
 
+    public int getWaist(){return waist;}
+
     public void putOn(){
         System.out.println("Putting this shorts on");
     }

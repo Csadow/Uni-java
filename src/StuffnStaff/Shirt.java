@@ -15,6 +15,8 @@ public class Shirt extends Clothing{
         this.sleeveLength=sleeveLength;
     }
 
+    public int getSleeveLength(){return sleeveLength;}
+
     public void check(){
         System.out.println("This shirt seems to be in good shape");
     }
