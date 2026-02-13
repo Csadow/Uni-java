@@ -402,6 +402,11 @@ public class ClothingMenu implements Menu {
         }
     }
 
+    private void showPolynorphism() {
+        clothingDAO.demonstratePolymorphism();
+    }
+
+
     // ========================================
     // HELPERS
     // ========================================

@@ -213,7 +213,7 @@ public class ClothingDAO {
     }
 
     public boolean updateShirts(Shirt shirt){
-        String sql = "UPDATE clothing SET name = ?, price = ?, size = ?, sleevelength = ?" +
+        String sql = "UPDATE clothing SET name = ?, price = ?, size = ?, sleeve_length = ?" +
                 "WHERE clothing_id = ? AND clothing_type = 'SHIRT'";
 
         Connection connection = DatabaseConnection.getConnection();
@@ -461,7 +461,7 @@ public class ClothingDAO {
     }
 
 
-    public void demostratePolymorphism(){
+    public void demonstratePolymorphism(){
         List<Clothing> clothingList = getAllClothing();
 
         System.out.println("---Polymorphism---");
